@@ -158,7 +158,8 @@ class Linq {
     }
 
     function Take(count) {
-        return Linq(arr.resize(count))
+        arr.resize(count)
+        return Linq(arr)
     }
 
     function Max(propertyName = null) {
