@@ -24,15 +24,15 @@ Now, you can access any of the amazing functions provided by the library.
 ## Functions
 
 ```cs
-Linq Where(function predicate) ;
-object First(function predicate = null);
-object Last(function predicate = null);
+Linq Where(function predicate);
+object First(function? predicate = null);
+object Last(function? predicate = null);
 object Single(function predicate);
-bool Any(function predicate = null);
+bool Any(function? predicate = null);
 bool All(function predicate);
 bool Contains(object value);
-Linq OrderBy(string? propertyName);
-Linq OrderByDescending(string? propertyName);
+Linq OrderBy(string propertyName);
+Linq OrderByDescending(string propertyName);
 Linq Skip(int count);
 Linq Take(int count);
 object Max(string? propertyName = null);
