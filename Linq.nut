@@ -162,15 +162,19 @@ class Linq {
     }
 
     function Max(propertyName = null) {
-        if (!propertyName)
-            return arr.sort().top();
+        if (!propertyName) {
+            arr.sort()
+            return arr.top();
+        }
 
         return OrderBy(propertyName).Last()
     }
 
     function Min(propertyName = null) {
-        if (!propertyName)
-            return arr.sort()[0];
+        if (!propertyName) {
+            arr.sort()
+            return arr[0];
+        }
 
         return OrderBy(propertyName).First()
     }
