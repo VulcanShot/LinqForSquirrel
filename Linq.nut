@@ -202,10 +202,12 @@ class Linq {
         local result = {};
     
         foreach (element in arr) {
-            if ( keyPropertyName in result )
+            local key = element[keyPropertyName];
+
+            if ( key in result )
                 throw Error.DuplicateKeys
             
-            result[keyPropertyName] <- valuePropertyName == null ? element : element[valuePropertyName];
+            result[key] <- valuePropertyName == null ? element : element[valuePropertyName];
         }
     
         return result;
