@@ -11,7 +11,7 @@ class Linq {
 
     arr = null;
 
-    Error =  {
+    static Error = {
         NoMatch = "No match for predicate",
         MoreThanOneMatch = "More than one match",
         DuplicateKeys = "Duplicate keys in array element's attributes"
