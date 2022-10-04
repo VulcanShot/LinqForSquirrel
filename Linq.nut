@@ -27,7 +27,8 @@ class Linq {
     }
     
     function First(predicate = null) {
-        if (!predicate) return arr[0]
+        if (!predicate)
+            return arr[0]
 
         for (local i = 0; i < arr.len(); i++) {
             if ( predicate(arr[i]) )
@@ -37,7 +38,8 @@ class Linq {
     }
     
     function Last(predicate = null) {
-        if (!predicate) return arr.top()
+        if (!predicate)
+            return arr.top()
 
         local result = null;
         local found = false;
@@ -194,8 +196,11 @@ class Linq {
         return Sum(propertyName) / Count();
     }
 
-    function Count() {
-        return arr.len();
+    function Count(predicate = null) {
+        if (!predicate) 
+            return arr.len();
+
+        return arr.Where(predicate).Count();
     }
     
     function ToTable(keyPropertyName, valuePropertyName = null) {

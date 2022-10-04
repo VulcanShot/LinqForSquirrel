@@ -38,8 +38,8 @@ Linq Take(int count);
 object Max(string? propertyName = null);
 object Min(string? propertyName = null);
 object Sum(string? propertyName = null);
-object Average(string? ropertyName = null);
-int Count();
+object Average(string? propertyName = null);
+int Count(function? predicate = null);
 Table ToTable(string keyPropertyName, string? valuePropertyName = null);
 Array ToArray();
 ```
