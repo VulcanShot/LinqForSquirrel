@@ -19,7 +19,7 @@ This is very simple. Instantiate a `Linq` object providing an array like so:
 local myArray = [1, 2, 3];
 local linqBadBoy = Linq(myArray);
 ```
-Now, you can access any of the amazing functions provided by the library.
+Now, you can access any of the amazing functions provided by the library. Note that you can chain those who return a `Linq` object.
 
 ## Functions
 
